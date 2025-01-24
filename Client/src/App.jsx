@@ -26,6 +26,7 @@ import AdminShopPage from "./Pages/Admin/AdminShopPage";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Game from "./Utils/User/Games/Game";
+import Bills from "./Utils/User/Bills";
 
 import ContentGenerator from "./Pages/Organization/ContentGenerator";
 
@@ -55,6 +56,7 @@ function App() {
           <Route path="/user/educational" element={<Blog />} />
           <Route path="/user/suggestion" element={<Suggestion />} />
           <Route path="/user/games" element={<Game />} />
+          <Route path="/user/bills" element={<Bills />} />
 
           {/* Organization Routes */}
           <Route path="/organisation" element={<Dashboard />} />
