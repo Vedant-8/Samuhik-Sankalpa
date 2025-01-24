@@ -109,7 +109,7 @@ return (
           }, []).map((row, rowIndex) => (
             <motion.div
               key={rowIndex}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-20"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-3"
               initial={{ opacity: 0, y: 50 }} // Start hidden and below
               animate={{ opacity: 1, y: 0 }} // Animate into position
               transition={{

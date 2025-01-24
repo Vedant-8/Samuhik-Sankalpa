@@ -250,7 +250,7 @@ const Shop = () => {
                   animate={{ opacity: 1, y: 0 }} // Animate to full opacity and original position
                   transition={{
                     duration: 0.5, // Same duration as other animations
-                    delay: 0.5, // Add a slight delay to sync with other animations
+                    delay: 0.25, // Add a slight delay to sync with other animations
                     ease: "easeInOut", // Smooth transition
                   }}
           >
