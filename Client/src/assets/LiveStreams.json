@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "title": "Tree Plantation Drive",
+      "description": "Join us live for a tree plantation drive and contribute towards a greener planet.",
+      "link": "https://www.youtube.com/embed/live_stream_1",
+      "category": "video"
+    },
+    {
+      "id": 2,
+      "title": "River Cleanup Drive",
+      "description": "Watch our volunteers clean up a local river in real-time.",
+      "link": "https://www.youtube.com/embed/live_stream_2",
+      "category": "video"
+    },
+    {
+      "id": 3,
+      "title": "Sustainability Seminar",
+      "description": "Learn about sustainable practices from experts in a live seminar.",
+      "link": "https://www.youtube.com/embed/live_stream_3",
+      "category": "video"
+    },
+    {
+      "id": 4,
+      "title": "Clean Energy Awareness Poster",
+      "description": "A poster highlighting the importance of clean and renewable energy sources.",
+      "link": "https://via.placeholder.com/800x400.png?text=Clean+Energy+Awareness+Poster",
+      "category": "poster"
+    },
+    {
+      "id": 5,
+      "title": "Water Conservation Poster",
+      "description": "Encouraging everyone to save water through this beautiful poster.",
+      "link": "https://via.placeholder.com/800x400.png?text=Water+Conservation+Poster",
+      "category": "poster"
+    }
+  ]
+  

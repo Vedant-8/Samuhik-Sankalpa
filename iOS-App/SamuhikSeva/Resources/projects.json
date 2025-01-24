@@ -1,0 +1,398 @@
+[
+  {
+    "id": "1",
+    "name": "Mumbai Green Oasis Initiative",
+    "description": [
+      "Focuses on reforesting urban spaces in Mumbai to combat air pollution.",
+      "Aims to plant native trees to restore green cover and improve the city's air quality.",
+      "Works with local communities to involve them in the plantation and maintenance of these areas.",
+      "Engages volunteers in tree planting, awareness programs, and community-building activities."
+    ],
+    "short_description": "Reforesting Mumbai's urban spaces to combat air pollution and improve green cover.",
+    "location": "Mumbai, India",
+    "funding_goal": 50000,
+    "funding_received": 20000,
+    "co2_reduction": 5000,
+    "trees_planted": 1000,
+    "water_saved": 10000,
+    "volunteers": [
+      "Ravi Desai",
+      "Priya Mehta"
+    ],
+    "updates": [
+      {
+        "date": "2025-01-15",
+        "description": "Planted 500 trees in Marine Drive area.",
+        "media": [
+          "update1.jpg"
+        ]
+      },
+      {
+        "date": "2025-01-17",
+        "description": "Held community event to raise awareness about urban reforestation.",
+        "media": [
+          "community_event.jpg"
+        ]
+      },
+      {
+        "date": "2025-01-20",
+        "description": "Planted an additional 500 trees in the Worli Sea Face area.",
+        "media": [
+          "update2.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Clean Water for Mumbai",
+    "description": [
+      "Provides clean drinking water solutions to underprivileged areas of Mumbai.",
+      "Installs water purification units in slums and marginalized communities.",
+      "Focuses on creating sustainable access to clean water to improve health outcomes.",
+      "Works with local authorities to ensure that these areas maintain access to clean water."
+    ],
+    "short_description": "Providing clean drinking water solutions to underprivileged areas of Mumbai.",
+    "location": "Mumbai, India",
+    "funding_goal": 100000,
+    "funding_received": 75000,
+    "co2_reduction": 0,
+    "trees_planted": 0,
+    "water_saved": 200000,
+    "volunteers": [
+      "Amit Kumar",
+      "Rina Shah"
+    ],
+    "updates": [
+      {
+        "date": "2025-01-10",
+        "description": "Installed 15 water purification units in Dharavi slum.",
+        "media": [
+          "update2.jpg"
+        ]
+      },
+      {
+        "date": "2025-01-12",
+        "description": "Conducted a water conservation awareness workshop for locals.",
+        "media": [
+          "workshop.jpg"
+        ]
+      },
+      {
+        "date": "2025-01-14",
+        "description": "Expanded water purification units to 5 additional areas in Bandra.",
+        "media": [
+          "unit_installation.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Mumbai Solar Empowerment Initiative",
+    "description": [
+      "Focuses on installing solar panels in low-income areas to provide affordable energy.",
+      "Aims to reduce the cost of energy for local residents while contributing to clean energy goals.",
+      "Trains local technicians in solar panel installation and maintenance to create long-term employment.",
+      "Supports energy independence by promoting renewable sources of energy."
+    ],
+    "short_description": "Installing solar panels in low-income areas for affordable and clean energy.",
+    "location": "Mumbai, India",
+    "funding_goal": 150000,
+    "funding_received": 80000,
+    "co2_reduction": 120000,
+    "trees_planted": 0,
+    "water_saved": 0,
+    "volunteers": [
+      "Meena Kapoor",
+      "Sandeep Joshi"
+    ],
+    "updates": [
+      {
+        "date": "2025-01-18",
+        "description": "Installed solar panels in 5 slums in Malad.",
+        "media": [
+          "solar_install_1.jpg"
+        ]
+      },
+      {
+        "date": "2025-01-20",
+        "description": "Started training local technicians to maintain solar systems.",
+        "media": [
+          "solar_training_1.jpg"
+        ]
+      },
+      {
+        "date": "2025-01-22",
+        "description": "Expanded solar panel installation to 3 additional localities in Andheri.",
+        "media": [
+          "solar_install_2.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Mumbai Waste Management Reform",
+    "description": [
+      "Improving waste management and recycling practices in Mumbai's urban areas.",
+      "Launching citywide composting programs to reduce landfill waste and encourage organic recycling.",
+      "Running awareness campaigns to educate citizens about recycling and waste reduction.",
+      "Partnering with local authorities and waste management companies to ensure program success."
+    ],
+    "short_description": "Improving waste management with recycling, composting, and awareness campaigns.",
+    "location": "Mumbai, India",
+    "funding_goal": 200000,
+    "funding_received": 120000,
+    "co2_reduction": 30000,
+    "trees_planted": 500,
+    "water_saved": 0,
+    "volunteers": [
+      "Nina Rao",
+      "Karan Sharma"
+    ],
+    "updates": [
+      {
+        "date": "2025-01-20",
+        "description": "Launched citywide composting program in Colaba area.",
+        "media": [
+          "compost_launch_1.jpg"
+        ]
+      },
+      {
+        "date": "2025-01-21",
+        "description": "Started awareness campaign on recycling and waste reduction.",
+        "media": [
+          "recycling_campaign.jpg"
+        ]
+      },
+      {
+        "date": "2025-01-22",
+        "description": "Launched e-waste recycling drives in key areas of Mumbai.",
+        "media": [
+          "ewaste_drive.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Recycled Materials School Initiative",
+    "description": [
+      "Promotes sustainability in schools by educating students about recycling and eco-friendly practices.",
+      "Teaches students how to reuse materials creatively and reduce waste.",
+      "Distributes recycling bins to schools to encourage waste separation at the source.",
+      "Organizes workshops and competitions to engage students and raise awareness."
+    ],
+    "short_description": "Promoting recycling and sustainability in schools through education and activities.",
+    "location": "Mumbai, India",
+    "funding_goal": 40000,
+    "funding_received": 25000,
+    "co2_reduction": 5000,
+    "trees_planted": 200,
+    "water_saved": 0,
+    "volunteers": [
+      "Aarti Deshmukh",
+      "Ravi Shah"
+    ],
+    "updates": [
+      {
+        "date": "2025-01-12",
+        "description": "Conducted first school workshop on recycling in Andheri.",
+        "media": [
+          "recycling_workshop_1.jpg"
+        ]
+      },
+      {
+        "date": "2025-01-14",
+        "description": "Launched a competition on creative reuse of waste materials for students.",
+        "media": [
+          "recycling_competition.jpg"
+        ]
+      },
+      {
+        "date": "2025-01-16",
+        "description": "Distributed 100 recycling bins to schools across Mumbai.",
+        "media": [
+          "bin_distribution.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Mumbai Beach Clean-Up Initiative",
+    "description": [
+      "Organizing clean-up drives on Mumbai\u2019s beaches to remove plastic waste.",
+      "Encourages local communities, especially schools, to participate in cleaning efforts.",
+      "Focuses on reducing pollution in marine environments and protecting marine biodiversity.",
+      "Partners with local organizations and volunteers to maximize impact."
+    ],
+    "short_description": "Organizing clean-up drives to reduce marine pollution and protect biodiversity.",
+    "location": "Mumbai, India",
+    "funding_goal": 30000,
+    "funding_received": 18000,
+    "co2_reduction": 0,
+    "trees_planted": 0,
+    "water_saved": 0,
+    "volunteers": [
+      "Rohit Gupta",
+      "Neha Patel"
+    ],
+    "updates": [
+      {
+        "date": "2025-01-14",
+        "description": "Cleaned up 3 miles of Juhu Beach, removing 300 kg of plastic waste.",
+        "media": [
+          "beach_cleanup_1.jpg"
+        ]
+      },
+      {
+        "date": "2025-01-16",
+        "description": "Engaged local schools in the beach clean-up effort.",
+        "media": [
+          "school_cleanup.jpg"
+        ]
+      },
+      {
+        "date": "2025-01-18",
+        "description": "Organized a second beach clean-up event at Versova Beach.",
+        "media": [
+          "versova_cleanup.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Sustainable Transport for Mumbai",
+    "description": [
+      "Promotes the adoption of electric vehicles (EVs) and bicycles to reduce air pollution and traffic congestion.",
+      "Installs EV charging stations at key locations to support the growth of electric transport.",
+      "Initiates bike-sharing programs to provide a sustainable mode of transportation.",
+      "Works with local businesses to encourage the use of electric vehicles."
+    ],
+    "short_description": "Encouraging electric vehicles and bicycles to reduce pollution and traffic congestion.",
+    "location": "Mumbai, India",
+    "funding_goal": 100000,
+    "funding_received": 70000,
+    "co2_reduction": 50000,
+    "trees_planted": 0,
+    "water_saved": 0,
+    "volunteers": [
+      "Sanjay Mehra",
+      "Shivani Agarwal"
+    ],
+    "updates": [
+      {
+        "date": "2025-01-19",
+        "description": "Launched electric vehicle charging stations across key locations in Mumbai.",
+        "media": [
+          "ev_launch.jpg"
+        ]
+      },
+      {
+        "date": "2025-01-21",
+        "description": "Initiated a bike-sharing program to reduce congestion in South Mumbai.",
+        "media": [
+          "bike_share.jpg"
+        ]
+      },
+      {
+        "date": "2025-01-22",
+        "description": "Launched an electric vehicle adoption campaign targeting local businesses.",
+        "media": [
+          "ev_adoption.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "name": "Mumbai Clean Air Project",
+    "description": [
+      "Aims to reduce air pollution by promoting cleaner technologies and encouraging the use of eco-friendly transport.",
+      "Partners with local businesses to reduce the use of diesel generators and promote sustainable alternatives.",
+      "Offers subsidies for the adoption of electric vehicles like rickshaws and cars.",
+      "Organizes public awareness campaigns to educate residents about the impact of air pollution."
+    ],
+    "short_description": "Reducing air pollution by promoting clean technologies and eco-friendly transport.",
+    "location": "Mumbai, India",
+    "funding_goal": 150000,
+    "funding_received": 90000,
+    "co2_reduction": 100000,
+    "trees_planted": 0,
+    "water_saved": 0,
+    "volunteers": [
+      "Deepika Sharma",
+      "Amit Rathi"
+    ],
+    "updates": [
+      {
+        "date": "2025-01-11",
+        "description": "Launched a public campaign to reduce the use of diesel generators.",
+        "media": [
+          "air_campaign.jpg"
+        ]
+      },
+      {
+        "date": "2025-01-13",
+        "description": "Started offering subsidies for electric rickshaws in Dadar and Lower Parel.",
+        "media": [
+          "electric_rickshaw.jpg"
+        ]
+      },
+      {
+        "date": "2025-01-15",
+        "description": "Organized a panel discussion on air pollution in Mumbai at a local university.",
+        "media": [
+          "panel_discussion.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "name": "Mumbai Urban Farming Initiative",
+    "description": [
+      "Promotes urban farming to encourage local food production and reduce dependency on external sources.",
+      "Sets up community gardens to grow food sustainably in city spaces.",
+      "Distributes farming tools and seeds to local families to promote home-based farming.",
+      "Teaches sustainable farming techniques to city dwellers."
+    ],
+    "short_description": "Promoting urban farming for local food production and sustainable practices.",
+    "location": "Mumbai, India",
+    "funding_goal": 80000,
+    "funding_received": 50000,
+    "co2_reduction": 15000,
+    "trees_planted": 0,
+    "water_saved": 30000,
+    "volunteers": [
+      "Sonal Yadav",
+      "Tushar Rane"
+    ],
+    "updates": [
+      {
+        "date": "2025-01-10",
+        "description": "Launched urban farming workshops in the suburbs of Mumbai.",
+        "media": [
+          "urban_farming_1.jpg"
+        ]
+      },
+      {
+        "date": "2025-01-12",
+        "description": "Set up community gardens in 3 localities in Malad.",
+        "media": [
+          "community_garden.jpg"
+        ]
+      },
+      {
+        "date": "2025-01-14",
+        "description": "Distributed seeds and farming tools to 100 families in Bhandup.",
+        "media": [
+          "seed_distribution.jpg"
+        ]
+      }
+    ]
+  }
+]

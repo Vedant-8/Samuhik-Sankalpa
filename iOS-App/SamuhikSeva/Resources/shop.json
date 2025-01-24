@@ -1,0 +1,94 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Reusable Bamboo Utensil Set",
+      "description": "A set of eco-friendly, reusable bamboo utensils perfect for reducing single-use plastic waste. Includes a fork, knife, spoon, and chopsticks in a travel pouch.",
+      "price": 15.99,
+      "category": "Kitchen & Dining",
+      "rating": 4.8,
+      "stock": 120
+    },
+    {
+      "id": 2,
+      "name": "Organic Cotton Tote Bag",
+      "description": "Durable and stylish organic cotton tote bag for shopping, carrying books, or everyday use. Washable and biodegradable.",
+      "price": 12.49,
+      "category": "Bags & Accessories",
+      "rating": 4.7,
+      "stock": 200
+    },
+    {
+      "id": 3,
+      "name": "Stainless Steel Water Bottle",
+      "description": "Leak-proof, insulated stainless steel water bottle to keep beverages hot or cold for hours. Available in multiple colors.",
+      "price": 24.99,
+      "category": "Drinkware",
+      "rating": 4.9,
+      "stock": 150
+    },
+    {
+      "id": 4,
+      "name": "Biodegradable Phone Case",
+      "description": "Stylish and protective phone case made from biodegradable materials, offering a sustainable alternative to plastic cases.",
+      "price": 19.99,
+      "category": "Electronics Accessories",
+      "rating": 4.6,
+      "stock": 80
+    },
+    {
+      "id": 5,
+      "name": "Recycled Paper Notebook",
+      "description": "Eco-friendly notebook made from 100% recycled paper, perfect for jotting down notes, sketches, or journaling.",
+      "price": 9.99,
+      "category": "Stationery",
+      "rating": 4.5,
+      "stock": 300
+    },
+    {
+      "id": 6,
+      "name": "Compostable Coffee Pods",
+      "description": "Single-serve coffee pods made with compostable materials, compatible with most coffee machines. Available in various blends.",
+      "price": 22.50,
+      "category": "Food & Beverages",
+      "rating": 4.8,
+      "stock": 100
+    },
+    {
+      "id": 7,
+      "name": "Eco-Friendly Yoga Mat",
+      "description": "Non-toxic and biodegradable yoga mat made from natural tree rubber. Provides excellent grip and cushioning.",
+      "price": 49.99,
+      "category": "Fitness & Outdoors",
+      "rating": 4.9,
+      "stock": 50
+    },
+    {
+      "id": 8,
+      "name": "Solar-Powered LED Lantern",
+      "description": "Rechargeable LED lantern powered by solar energy. Ideal for camping, emergency use, or outdoor lighting.",
+      "price": 29.99,
+      "category": "Outdoor Gear",
+      "rating": 4.7,
+      "stock": 70
+    },
+    {
+      "id": 9,
+      "name": "Plant-Based Laundry Detergent",
+      "description": "Eco-friendly laundry detergent made from plant-based ingredients, free from harsh chemicals and gentle on fabrics.",
+      "price": 14.99,
+      "category": "Home Care",
+      "rating": 4.6,
+      "stock": 150
+    },
+    {
+      "id": 10,
+      "name": "Beeswax Food Wraps",
+      "description": "Reusable beeswax wraps to replace single-use plastic wrap. Perfect for keeping food fresh and reducing waste.",
+      "price": 16.99,
+      "category": "Kitchen & Dining",
+      "rating": 4.8,
+      "stock": 100
+    }
+  ]
+}
