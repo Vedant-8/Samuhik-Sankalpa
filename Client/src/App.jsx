@@ -27,6 +27,8 @@ import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Game from "./Utils/User/Games/Game";
 import Bills from "./Utils/User/Bills";
+import Recycle from "./Components/User/Recycle";
+import UploadPage from "./Components/User/HandlePhone";
 
 import ContentGenerator from "./Pages/Organization/ContentGenerator";
 
@@ -57,6 +59,8 @@ function App() {
           <Route path="/user/suggestion" element={<Suggestion />} />
           <Route path="/user/games" element={<Game />} />
           <Route path="/user/bills" element={<Bills />} />
+          <Route path="/user/recycle" element={<Recycle />} />
+          <Route path="/user/upload" element={<UploadPage />} />
 
           {/* Organization Routes */}
           <Route path="/organisation" element={<Dashboard />} />
