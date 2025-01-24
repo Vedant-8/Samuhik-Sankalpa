@@ -33,12 +33,22 @@ const Navbar = () => {
             >
               Shop
             </button>
+            
+            
             <button
-              onClick={() => navigate("/user/volunteer")}
+              onClick={() => navigate("/user/bills")}
               className="text-gray-700 hover:text-green-600 font-medium"
             >
-              Volunteer
+              Bills
             </button>
+            <button
+              onClick={() => navigate("/user/recycle")}
+              className="text-gray-700 hover:text-green-600 font-medium"
+            >
+              Recycle
+            </button>
+
+
             <button
               onClick={() => navigate("/user/rewards")}
               className="text-gray-700 hover:text-green-600 font-medium"
@@ -46,16 +56,10 @@ const Navbar = () => {
               Rewards
             </button>
             <button
-              onClick={() => navigate("/user/suggestion")}
+              onClick={() => navigate("/user/volunteer")}
               className="text-gray-700 hover:text-green-600 font-medium"
             >
-              AI suggestion for Donation
-            </button>
-            <button
-              onClick={() => navigate("/user/games")}
-              className="text-gray-700 hover:text-green-600 font-medium"
-            >
-              Games
+              Volunteer
             </button>
             <button
               onClick={() => navigate("/user/educational")}
