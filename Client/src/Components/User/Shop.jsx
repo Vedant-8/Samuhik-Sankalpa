@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import productsData from "../../assets/shop.json";
 import Navbar from "./Navbar";
 import Footer from "../Footer";
+import { motion } from "framer-motion";
 
 import tickImage from  "../../assets/2.png"; // URL for the tick image
 
@@ -100,21 +101,35 @@ const Shop = () => {
         {/* Top Bar */}
         <div className="flex justify-between items-center mb-8 px-4">
           {/* Search Bar */}
-          <div className="w-full max-w-lg">
-            <input
-              type="text"
-              className="w-full py-2 px-4 border rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-green-500"
-              placeholder="Search products..."
-              value={searchText}
-              onChange={(e) => setSearchText(e.target.value)}
-            />
-          </div>
+          <motion.div
+          className="w-full max-w-lg"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <input
+            type="text"
+            className="w-full py-2 px-4 border rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-green-500"
+            placeholder="Search products..."
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
+        </motion.div>
+
 
           {/* Cart Button */}
           <div className="relative">
-            <button
+          <motion.div
+            className="w-full max-w-lg"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <motion.button
               onClick={toggleCart}
               className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg shadow-lg transition duration-300 ease-in-out"
+              whileHover={{ scale: 1.1 }} // Slightly increase size on hover
+              whileTap={{ scale: 0.95 }} // Optional: Slightly shrink on click
             >
               {/* Inline SVG for Shopping Cart Icon */}
               <svg
@@ -131,7 +146,9 @@ const Shop = () => {
               </svg>
               <span className="text-lg">Cart</span>
               <span className="ml-2 font-bold text-xl">{cartItems.length}</span>
-            </button>
+            </motion.button>
+          </motion.div>
+
 
             {/* Cart Modal */}
             {isCartOpen && (
@@ -163,7 +180,15 @@ const Shop = () => {
                 </div>
 
                 {/* Product List Section */}
-                <div className="p-4">
+                <motion.div
+                  className="p-4"
+                  initial={{ opacity: 0, scale: 0.9 }} // Start slightly smaller and fully transparent
+                  animate={{ opacity: 1, scale: 1 }} // Animate to full size and full opacity
+                  transition={{
+                    duration: 0.15, // Quick animation (300ms)
+                    ease: "easeOut", // Smooth exit easing for a pop effect
+                  }}
+                >
                   {cartItems.length === 0 ? (
                     <p className="text-center text-gray-600">No items in the cart.</p>
                   ) : (
@@ -200,7 +225,7 @@ const Shop = () => {
                       </div>
                     ))
                   )}
-                </div>
+                </motion.div>
 
                 {/* Total Price and Buy Button */}
                 <div className="border-t p-4 flex justify-between items-center">
@@ -219,6 +244,16 @@ const Shop = () => {
         </div>
 
         {/* Product Grid */}
+        <motion.div
+                  className="p-4"
+                  initial={{ opacity: 0, y: 50 }} // Start below and fully transparent
+                  animate={{ opacity: 1, y: 0 }} // Animate to full opacity and original position
+                  transition={{
+                    duration: 0.5, // Same duration as other animations
+                    delay: 0.5, // Add a slight delay to sync with other animations
+                    ease: "easeInOut", // Smooth transition
+                  }}
+          >
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
           {filteredProducts.map((product) => (
             <div
@@ -243,6 +278,7 @@ const Shop = () => {
             </div>
           ))}
         </div>
+      </motion.div>
       </div>
 
       {/* Payment Modal */}
@@ -300,3 +336,8 @@ const Shop = () => {
 };
 
 export default Shop;
+
+
+
+// wanted to blur backgrond page when buy now is clicked 
+// wanted to add shake on cart of add to cart

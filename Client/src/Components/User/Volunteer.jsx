@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import projectsData from "../../assets/projects.json";
 import Navbar from "./Navbar";
 import Footer from "../Footer";
+import { motion } from "framer-motion";
 
 const Volunteer = () => {
   const [filteredProjects, setFilteredProjects] = useState([]);
@@ -84,16 +85,19 @@ const Volunteer = () => {
     <>
       <Navbar />
       <div className="min-h-screen bg-gradient-to-r from-[#e8f5e9] to-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-center mb-12">
+        <motion.div className="max-w-7xl mx-auto px-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}>
+          <motion.div className="flex justify-center mb-12">
             <input
               type="text"
               placeholder="Search Projects"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full max-w-lg bg-white rounded-lg shadow-lg px-6 py-3 text-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-300"
+              className="w-full mt-8 max-w-lg bg-white rounded-lg shadow-lg px-6 py-3 text-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-300"
             />
-          </div>
+          </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
             {filteredProjects.map(
               (project) =>
@@ -122,7 +126,7 @@ const Volunteer = () => {
                 )
             )}
           </div>
-        </div>
+        </motion.div>
 
         {showForm && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
