@@ -170,7 +170,7 @@ const ImageUploader = () => {
           <motion.button whileHover ={{scale:1.1}}
           whileTap = {{scale : 0.95}}
           onClick={generateQrCode}
-          className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 text-base rounded-full "
+          className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 text-base rounded-full "
         >
           Generate QR Code
         </motion.button>
@@ -198,9 +198,9 @@ const ImageUploader = () => {
         <button
           type="submit"
           disabled={!selectedImage}
-          className="w-full py-2 px-4 bg-violet-600 text-white rounded-md 
-            hover:bg-violet-700 focus:outline-none focus:ring-2 
-            focus:ring-violet-500 focus:ring-offset-2
+          className="w-full py-2 px-4 bg-green-500 text-white rounded-md 
+            hover:bg-green-600 focus:outline-none focus:ring-2 
+            focus:ring-green-700 focus:ring-offset-2
             disabled:opacity-50 disabled:cursor-not-allowed"
         >
           Upload Image
