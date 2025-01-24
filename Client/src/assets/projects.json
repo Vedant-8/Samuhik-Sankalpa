@@ -15,32 +15,23 @@
     "co2_reduction": 5000,
     "trees_planted": 1000,
     "water_saved": 10000,
-    "volunteers": [
-      "Ravi Desai",
-      "Priya Mehta"
-    ],
+    "volunteers": ["Ravi Desai", "Priya Mehta"],
     "volunteer_requirement": true,
     "updates": [
       {
         "date": "2025-01-15",
         "description": "Planted 500 trees in Marine Drive area.",
-        "media": [
-          "update1.jpg"
-        ]
+        "media": ["update1.jpg"]
       },
       {
         "date": "2025-01-17",
         "description": "Held community event to raise awareness about urban reforestation.",
-        "media": [
-          "community_event.jpg"
-        ]
+        "media": ["community_event.jpg"]
       },
       {
         "date": "2025-01-20",
         "description": "Planted an additional 500 trees in the Worli Sea Face area.",
-        "media": [
-          "update2.jpg"
-        ]
+        "media": ["update2.jpg"]
       }
     ]
   },
@@ -60,32 +51,23 @@
     "co2_reduction": 0,
     "trees_planted": 0,
     "water_saved": 200000,
-    "volunteers": [
-      "Amit Kumar",
-      "Rina Shah"
-    ],
+    "volunteers": ["Amit Kumar", "Rina Shah"],
     "volunteer_requirement": false,
     "updates": [
       {
         "date": "2025-01-10",
         "description": "Installed 15 water purification units in Dharavi slum.",
-        "media": [
-          "update2.jpg"
-        ]
+        "media": ["update2.jpg"]
       },
       {
         "date": "2025-01-12",
         "description": "Conducted a water conservation awareness workshop for locals.",
-        "media": [
-          "workshop.jpg"
-        ]
+        "media": ["workshop.jpg"]
       },
       {
         "date": "2025-01-14",
         "description": "Expanded water purification units to 5 additional areas in Bandra.",
-        "media": [
-          "unit_installation.jpg"
-        ]
+        "media": ["unit_installation.jpg"]
       }
     ]
   },
@@ -105,32 +87,23 @@
     "co2_reduction": 30000,
     "trees_planted": 500,
     "water_saved": 0,
-    "volunteers": [
-      "Nina Rao",
-      "Karan Sharma"
-    ],
+    "volunteers": ["Nina Rao", "Karan Sharma"],
     "volunteer_requirement": false,
     "updates": [
       {
         "date": "2025-01-20",
         "description": "Launched citywide composting program in Colaba area.",
-        "media": [
-          "compost_launch_1.jpg"
-        ]
+        "media": ["compost_launch_1.jpg"]
       },
       {
         "date": "2025-01-21",
         "description": "Started awareness campaign on recycling and waste reduction.",
-        "media": [
-          "recycling_campaign.jpg"
-        ]
+        "media": ["recycling_campaign.jpg"]
       },
       {
         "date": "2025-01-22",
         "description": "Launched e-waste recycling drives in key areas of Mumbai.",
-        "media": [
-          "ewaste_drive.jpg"
-        ]
+        "media": ["ewaste_drive.jpg"]
       }
     ]
   },
@@ -150,32 +123,23 @@
     "co2_reduction": 5000,
     "trees_planted": 200,
     "water_saved": 0,
-    "volunteers": [
-      "Aarti Deshmukh",
-      "Ravi Shah"
-    ],
+    "volunteers": ["Aarti Deshmukh", "Ravi Shah"],
     "volunteer_requirement": true,
     "updates": [
       {
         "date": "2025-01-12",
         "description": "Conducted first school workshop on recycling in Andheri.",
-        "media": [
-          "recycling_workshop_1.jpg"
-        ]
+        "media": ["recycling_workshop_1.jpg"]
       },
       {
         "date": "2025-01-14",
         "description": "Launched a competition on creative reuse of waste materials for students.",
-        "media": [
-          "recycling_competition.jpg"
-        ]
+        "media": ["recycling_competition.jpg"]
       },
       {
         "date": "2025-01-16",
         "description": "Distributed 100 recycling bins to schools across Mumbai.",
-        "media": [
-          "bin_distribution.jpg"
-        ]
+        "media": ["bin_distribution.jpg"]
       }
     ]
   },
@@ -195,32 +159,23 @@
     "co2_reduction": 0,
     "trees_planted": 0,
     "water_saved": 0,
-    "volunteers": [
-      "Rohit Gupta",
-      "Neha Patel"
-    ],
+    "volunteers": ["Rohit Gupta", "Neha Patel"],
     "volunteer_requirement": false,
     "updates": [
       {
         "date": "2025-01-14",
         "description": "Cleaned up 3 miles of Juhu Beach, removing 300 kg of plastic waste.",
-        "media": [
-          "beach_cleanup_1.jpg"
-        ]
+        "media": ["beach_cleanup_1.jpg"]
       },
       {
         "date": "2025-01-16",
         "description": "Engaged local schools in the beach clean-up effort.",
-        "media": [
-          "school_cleanup.jpg"
-        ]
+        "media": ["school_cleanup.jpg"]
       },
       {
         "date": "2025-01-18",
         "description": "Organized a second beach clean-up event at Versova Beach.",
-        "media": [
-          "versova_cleanup.jpg"
-        ]
+        "media": ["versova_cleanup.jpg"]
       }
     ]
   },
@@ -240,32 +195,23 @@
     "co2_reduction": 50000,
     "trees_planted": 0,
     "water_saved": 0,
-    "volunteers": [
-      "Sanjay Mehra",
-      "Shivani Agarwal"
-    ],
+    "volunteers": ["Sanjay Mehra", "Shivani Agarwal"],
     "volunteer_requirement": true,
     "updates": [
       {
         "date": "2025-01-19",
         "description": "Launched electric vehicle charging stations across key locations in Mumbai.",
-        "media": [
-          "ev_launch.jpg"
-        ]
+        "media": ["ev_launch.jpg"]
       },
       {
         "date": "2025-01-21",
         "description": "Initiated a bike-sharing program to reduce congestion in South Mumbai.",
-        "media": [
-          "bike_share.jpg"
-        ]
+        "media": ["bike_share.jpg"]
       },
       {
         "date": "2025-01-22",
         "description": "Launched an electric vehicle adoption campaign targeting local businesses.",
-        "media": [
-          "ev_adoption.jpg"
-        ]
+        "media": ["ev_adoption.jpg"]
       }
     ]
   },
@@ -285,32 +231,23 @@
     "co2_reduction": 100000,
     "trees_planted": 0,
     "water_saved": 0,
-    "volunteers": [
-      "Deepika Sharma",
-      "Amit Rathi"
-    ],
+    "volunteers": ["Deepika Sharma", "Amit Rathi"],
     "volunteer_requirement": false,
     "updates": [
       {
         "date": "2025-01-11",
         "description": "Launched a public campaign to reduce the use of diesel generators.",
-        "media": [
-          "air_campaign.jpg"
-        ]
+        "media": ["air_campaign.jpg"]
       },
       {
         "date": "2025-01-13",
         "description": "Started offering subsidies for electric rickshaws in Dadar and Lower Parel.",
-        "media": [
-          "electric_rickshaw.jpg"
-        ]
+        "media": ["electric_rickshaw.jpg"]
       },
       {
         "date": "2025-01-15",
         "description": "Organized a panel discussion on air pollution in Mumbai at a local university.",
-        "media": [
-          "panel_discussion.jpg"
-        ]
+        "media": ["panel_discussion.jpg"]
       }
     ]
   },
@@ -330,32 +267,167 @@
     "co2_reduction": 15000,
     "trees_planted": 0,
     "water_saved": 30000,
-    "volunteers": [
-      "Sonal Yadav",
-      "Tushar Rane"
-    ],
+    "volunteers": ["Sonal Yadav", "Tushar Rane"],
     "volunteer_requirement": true,
     "updates": [
       {
         "date": "2025-01-10",
         "description": "Launched urban farming workshops in the suburbs of Mumbai.",
-        "media": [
-          "urban_farming_1.jpg"
-        ]
+        "media": ["urban_farming_1.jpg"]
       },
       {
         "date": "2025-01-12",
         "description": "Set up community gardens in 3 localities in Malad.",
-        "media": [
-          "community_garden.jpg"
-        ]
+        "media": ["community_garden.jpg"]
       },
       {
         "date": "2025-01-14",
         "description": "Distributed seeds and farming tools to 100 families in Bhandup.",
-        "media": [
-          "seed_distribution.jpg"
-        ]
+        "media": ["seed_distribution.jpg"]
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "name": "Plastic Recycling Mumbai Initiative",
+    "description": [
+      "Aims to reduce plastic waste in Mumbai by setting up plastic recycling units.",
+      "Collects plastic waste from households, schools, and businesses for proper recycling.",
+      "Transforms collected plastic waste into reusable materials like bricks and furniture.",
+      "Engages local communities in segregating and donating plastic waste."
+    ],
+    "short_description": "Reducing plastic waste by recycling and transforming it into reusable materials.",
+    "location": "Mumbai, India",
+    "funding_goal": 120000,
+    "funding_received": 75000,
+    "co2_reduction": 20000,
+    "trees_planted": 0,
+    "water_saved": 5000,
+    "volunteers": ["Kavita Iyer", "Raj Malhotra"],
+    "volunteer_requirement": true,
+    "updates": [
+      {
+        "date": "2025-01-15",
+        "description": "Installed plastic recycling units in Bandra and Andheri.",
+        "media": ["plastic_recycling_unit.jpg"]
+      },
+      {
+        "date": "2025-01-18",
+        "description": "Conducted a workshop on upcycling plastic into home decor items.",
+        "media": ["plastic_upcycling_workshop.jpg"]
+      },
+      {
+        "date": "2025-01-22",
+        "description": "Partnered with 10 schools for a plastic collection drive.",
+        "media": ["plastic_collection_drive.jpg"]
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "name": "Paper Recycling and Reuse Initiative",
+    "description": [
+      "Focuses on recycling paper waste into eco-friendly products like notebooks and packaging material.",
+      "Encourages offices and schools to donate used paper for recycling.",
+      "Organizes awareness programs to promote the use of recycled paper products.",
+      "Partners with local businesses to adopt recycled paper as a sustainable alternative."
+    ],
+    "short_description": "Recycling paper waste into eco-friendly products and promoting sustainability.",
+    "location": "Mumbai, India",
+    "funding_goal": 80000,
+    "funding_received": 60000,
+    "co2_reduction": 10000,
+    "trees_planted": 0,
+    "water_saved": 20000,
+    "volunteers": ["Sneha Joshi", "Arjun Deshpande"],
+    "volunteer_requirement": false,
+    "updates": [
+      {
+        "date": "2025-01-14",
+        "description": "Recycled 5 tons of paper waste into notebooks and packaging material.",
+        "media": ["paper_recycling.jpg"]
+      },
+      {
+        "date": "2025-01-16",
+        "description": "Launched a corporate paper donation campaign in Lower Parel.",
+        "media": ["paper_donation_campaign.jpg"]
+      },
+      {
+        "date": "2025-01-19",
+        "description": "Distributed 1000 recycled notebooks to underprivileged schools.",
+        "media": ["notebook_distribution.jpg"]
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "name": "Mumbai Glass Recycling Program",
+    "description": [
+      "Focuses on recycling glass waste from restaurants, households, and businesses.",
+      "Repurposes glass waste into decorative items, tiles, and reusable containers.",
+      "Works with local artisans to create eco-friendly products from recycled glass.",
+      "Runs educational campaigns on the importance of glass recycling."
+    ],
+    "short_description": "Recycling glass waste into eco-friendly products and promoting reuse.",
+    "location": "Mumbai, India",
+    "funding_goal": 100000,
+    "funding_received": 65000,
+    "co2_reduction": 15000,
+    "trees_planted": 0,
+    "water_saved": 0,
+    "volunteers": ["Pooja Bhatia", "Rohan Kulkarni"],
+    "volunteer_requirement": true,
+    "updates": [
+      {
+        "date": "2025-01-12",
+        "description": "Recycled 3 tons of glass waste into decorative tiles and containers.",
+        "media": ["glass_recycling.jpg"]
+      },
+      {
+        "date": "2025-01-17",
+        "description": "Held a community workshop on glass waste segregation and recycling.",
+        "media": ["glass_workshop.jpg"]
+      },
+      {
+        "date": "2025-01-20",
+        "description": "Partnered with 20 restaurants to collect glass waste regularly.",
+        "media": ["glass_collection_partnership.jpg"]
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "name": "Metal Recycling Mumbai Initiative",
+    "description": [
+      "Aims to recycle metal waste into raw materials for the manufacturing industry.",
+      "Collects metal waste from construction sites, households, and local businesses.",
+      "Reduces landfill waste by promoting metal recycling practices.",
+      "Provides training programs for communities on how to segregate and recycle metal effectively."
+    ],
+    "short_description": "Recycling metal waste to reduce landfill and create raw materials for manufacturing.",
+    "location": "Mumbai, India",
+    "funding_goal": 150000,
+    "funding_received": 85000,
+    "co2_reduction": 30000,
+    "trees_planted": 0,
+    "water_saved": 0,
+    "volunteers": ["Ramesh Tiwari", "Anjali Patel"],
+    "volunteer_requirement": false,
+    "updates": [
+      {
+        "date": "2025-01-13",
+        "description": "Recycled 10 tons of metal waste into raw materials for the local industry.",
+        "media": ["metal_recycling.jpg"]
+      },
+      {
+        "date": "2025-01-18",
+        "description": "Launched a program to collect scrap metal from residential areas in South Mumbai.",
+        "media": ["metal_collection.jpg"]
+      },
+      {
+        "date": "2025-01-21",
+        "description": "Partnered with 5 construction companies to recycle leftover metal from sites.",
+        "media": ["construction_metal_recycling.jpg"]
       }
     ]
   }
