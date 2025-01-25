@@ -1,11 +1,17 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { AppBar, Toolbar, Box, Button } from "@mui/material";
-import { styled } from "@mui/material/styles";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { Box } from "@mui/material";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [activePage, setActivePage] = useState(""); // State to track the active page
+  const [isOpen, setIsOpen] = useState(false); // State to track mobile menu visibility
   const navigate = useNavigate();
+  const location = useLocation(); // Hook to get the current path
+
+  // Update the active page based on the current location
+  useEffect(() => {
+    setActivePage(location.pathname);
+  }, [location]);
 
   // Handle Logout
   const handleLogout = () => {
@@ -27,46 +33,26 @@ const Navbar = () => {
 
           {/* Desktop Navigation Buttons */}
           <div className="hidden md:flex items-center space-x-8">
-            <button
-              onClick={() => navigate("/user/shop")}
-              className="text-gray-700 hover:text-green-600 font-medium"
-            >
-              Shop
-            </button>
-            
-            
-            <button
-              onClick={() => navigate("/user/bills")}
-              className="text-gray-700 hover:text-green-600 font-medium"
-            >
-              Bills
-            </button>
-            <button
-              onClick={() => navigate("/user/recycle")}
-              className="text-gray-700 hover:text-green-600 font-medium"
-            >
-              Recycle
-            </button>
-
-
-            <button
-              onClick={() => navigate("/user/rewards")}
-              className="text-gray-700 hover:text-green-600 font-medium"
-            >
-              Rewards
-            </button>
-            <button
-              onClick={() => navigate("/user/volunteer")}
-              className="text-gray-700 hover:text-green-600 font-medium"
-            >
-              Volunteer
-            </button>
-            <button
-              onClick={() => navigate("/user/educational")}
-              className="text-gray-700 hover:text-green-600 font-medium"
-            >
-              Educational
-            </button>
+            {[
+              { path: "/user/shop", label: "Shop" },
+              { path: "/user/bills", label: "Bills" },
+              { path: "/user/recycle", label: "Recycle" },
+              { path: "/user/rewards", label: "Rewards" },
+              { path: "/user/volunteer", label: "Volunteer" },
+              { path: "/user/educational", label: "Educational" },
+            ].map(({ path, label }) => (
+              <button
+                key={path}
+                onClick={() => navigate(path)}
+                className={`font-medium px-4 py-2 rounded-md ${
+                  activePage === path
+                    ? "bg-green-100 text-green-600" // Active page background
+                    : "text-gray-700"
+                } hover:text-green-600`} // Hover only changes text color
+              >
+                {label}
+              </button>
+            ))}
             {/* Logout Button */}
             <button
               onClick={handleLogout}
@@ -112,39 +98,32 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200">
+        <div className="md:hidden border-t border-gray-200">
           <div className="space-y-1 px-2 pb-3">
-            <button
-              onClick={() => navigate("/user/shop")}
-              className="block text-gray-700 hover:text-green-600 font-medium"
-            >
-              Shop
-            </button>
-            <button
-              onClick={() => navigate("/user/volunteer")}
-              className="block text-gray-700 hover:text-green-600 font-medium"
-            >
-              Volunteer
-            </button>
-            <button
-              onClick={() => navigate("/user/rewards")}
-              className="block text-gray-700 hover:text-green-600 font-medium"
-            >
-              Rewards
-            </button>
-            <button
-              onClick={() => navigate("/user/suggestion")}
-              className="block text-gray-700 hover:text-green-600 font-medium"
-            >
-              AI suggestion for Donation
-            </button>
-            <button
-              onClick={() => navigate("/user/educational")}
-              className="block text-gray-700 hover:text-green-600 font-medium"
-            >
-              Educational
-            </button>
-            {/* Mobile Logout Button */}
+            {[
+              { path: "/user/shop", label: "Shop" },
+              { path: "/user/bills", label: "Bills" },
+              { path: "/user/recycle", label: "Recycle" },
+              { path: "/user/rewards", label: "Rewards" },
+              { path: "/user/volunteer", label: "Volunteer" },
+              { path: "/user/educational", label: "Educational" },
+            ].map(({ path, label }) => (
+              <button
+                key={path}
+                onClick={() => {
+                  navigate(path);
+                  setIsOpen(false); // Close menu after navigation
+                }}
+                className={`block font-medium px-4 py-2 rounded-md ${
+                  activePage === path
+                    ? "bg-green-100 text-green-700" // Active page background
+                    : "text-gray-700"
+                } hover:text-green-600`} // Hover only changes text color
+              >
+                {label}
+              </button>
+            ))}
+            {/* Logout Button */}
             <button
               onClick={handleLogout}
               className="block text-red-500 hover:text-red-700 font-medium"
