@@ -21,12 +21,13 @@ const Bills = () => {
     "Microwave",
   ];
 
-  const { coords, isGeolocationAvailable, isGeolocationEnabled } = useGeolocated({
-    positionOptions: {
-      enableHighAccuracy: true,
-    },
-    userDecisionTimeout: 5000,
-  });
+  const { coords, isGeolocationAvailable, isGeolocationEnabled } =
+    useGeolocated({
+      positionOptions: {
+        enableHighAccuracy: true,
+      },
+      userDecisionTimeout: 5000,
+    });
 
   const updateApplianceQuantity = (appliance, increment) => {
     setApplianceQuantities((prev) => ({
@@ -41,19 +42,25 @@ const Bills = () => {
       return;
     }
 
-    const city = coords ? `Latitude: ${coords.latitude}, Longitude: ${coords.longitude}` : "unknown";
+    const city = coords
+      ? `Latitude: ${coords.latitude}, Longitude: ${coords.longitude}`
+      : "unknown";
 
     try {
       setLoading(true);
 
-      const genAI = new GoogleGenerativeAI("");
+      const genAI = new GoogleGenerativeAI(
+        "AIzaSyBeaivuBDufjfqWN5I75qO1HcDDfv-v-Eg"
+      );
       const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
       const prompt = `
         A household in ${city} has ${familyMembers} family members, an area of ${squareFeet} square feet, 
-        and the following appliances and quantities: ${Object.entries(applianceQuantities)
-          .map(([appliance, quantity]) => `${appliance}: ${quantity}`)
-          .join(", ") || "none"}. 
+        and the following appliances and quantities: ${
+          Object.entries(applianceQuantities)
+            .map(([appliance, quantity]) => `${appliance}: ${quantity}`)
+            .join(", ") || "none"
+        }. 
         The household's current power consumption is ${powerConsumption} kWh.
 
         Please:
@@ -108,7 +115,9 @@ const Bills = () => {
           />
 
           <div className="mb-6">
-            <h3 className="text-lg font-semibold text-green-700 mb-4">Appliances and Quantities:</h3>
+            <h3 className="text-lg font-semibold text-green-700 mb-4">
+              Appliances and Quantities:
+            </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
               {applianceOptions.map((appliance) => (
                 <div
@@ -156,7 +165,9 @@ const Bills = () => {
 
           {aiResponse && (
             <div className="mt-8 p-6 bg-green-50 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-green-700 mb-4">AI Response:</h3>
+              <h3 className="text-xl font-semibold text-green-700 mb-4">
+                AI Response:
+              </h3>
               <p className="text-green-900">{aiResponse}</p>
             </div>
           )}

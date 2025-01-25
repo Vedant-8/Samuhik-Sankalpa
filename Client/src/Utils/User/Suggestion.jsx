@@ -21,7 +21,7 @@ const Suggestion = () => {
       setLoading(true);
 
       // Initialize the Gemini API client
-      const genAI = new GoogleGenerativeAI("");
+      const genAI = new GoogleGenerativeAI("AIzaSyBeaivuBDufjfqWN5I75qO1HcDDfv-v-Eg");
       const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
       // Generate the prompt dynamically based on the user's budget, specifications, and projects data

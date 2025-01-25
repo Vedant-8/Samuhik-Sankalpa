@@ -27,14 +27,18 @@ import projectsData from "../../assets/projects.json";
 import Navbar from "./Navbar";
 import Footer from "../Footer";
 import coin from "../../assets/1.png";
+import tick from "../../assets/2.png"; // Add your tick image here
 
 const ProjectDetail = () => {
   const { id } = useParams();
   const project = projectsData.find((project) => project.id === id);
   const [openModal, setOpenModal] = useState(false);
+  const [openOtherModal, setOpenOtherModal] = useState(false);
   const [donationAmount, setDonationAmount] = useState("");
+  const [donationDescription, setDonationDescription] = useState("");
   const [showNotification, setShowNotification] = useState(false);
   const [showCoinCard, setShowCoinCard] = useState(false);
+  const [showTickCard, setShowTickCard] = useState(false);
 
   if (!project) {
     return <Typography variant="h4">Project not found</Typography>;
@@ -44,8 +48,16 @@ const ProjectDetail = () => {
     setOpenModal(true);
   };
 
+  const handleOtherDonateClick = () => {
+    setOpenOtherModal(true);
+  };
+
   const handleCloseModal = () => {
     setOpenModal(false);
+  };
+
+  const handleCloseOtherModal = () => {
+    setOpenOtherModal(false);
   };
 
   const handleDonateSubmit = () => {
@@ -57,7 +69,20 @@ const ProjectDetail = () => {
         setShowCoinCard(false);
         setShowNotification(true);
         setTimeout(() => setShowNotification(false), 3000);
-      }, 3000); // Coin card disappears after 3 seconds
+      }, 3000);
+    }
+  };
+
+  const handleOtherDonateSubmit = () => {
+    if (donationDescription.trim()) {
+      setOpenOtherModal(false);
+      setShowTickCard(true);
+      setDonationDescription(""); // Reset description
+      setTimeout(() => {
+        setShowTickCard(false);
+        setShowNotification(true);
+        setTimeout(() => setShowNotification(false), 3000);
+      }, 3000);
     }
   };
 
@@ -101,24 +126,43 @@ const ProjectDetail = () => {
                     ))}
                   </ul>
                 </Typography>
-                <Button
-                  variant="contained"
-                  sx={{
-                    backgroundColor: "green",
-                    color: "#fff",
-                    borderRadius: "20px",
-                    "&:hover": { backgroundColor: "#388e3c" },
-                  }}
-                  onClick={handleDonateClick}
-                >
-                  Donate
-                </Button>
+                <Box sx={{ display: "flex", gap: 2 }}>
+                  <Button
+                    variant="contained"
+                    sx={{
+                      backgroundColor: "green",
+                      color: "#fff",
+                      borderRadius: "20px",
+                      "&:hover": { backgroundColor: "#388e3c" },
+                    }}
+                    onClick={handleDonateClick}
+                  >
+                    Money Donation
+                  </Button>
+                  <Button
+                    variant="contained"
+                    sx={{
+                      backgroundColor: "green",
+                      color: "#fff",
+                      borderRadius: "20px",
+                      "&:hover": { backgroundColor: "#388e3c" },
+                    }}
+                    onClick={handleOtherDonateClick}
+                  >
+                    Other Donation
+                  </Button>
+                </Box>
               </CardContent>
             </Card>
           </Grid>
 
-          {/* Section 2: Funding Goals, Received, and Graph */}
-          <Grid item xs={12} sm={6}>
+          {/* Remaining sections as is... */}
+          
+
+        
+
+      {/* Section 2: Funding Goals, Received, and Graph */}
+      <Grid item xs={12} sm={6}>
             <Card sx={{ boxShadow: 3, borderRadius: 2, padding: 2 }}>
               <CardContent>
                 <Box sx={{ display: "flex", gap: 2, mb: 4 }}>
@@ -256,8 +300,9 @@ const ProjectDetail = () => {
               </CardContent>
             </Card>
           </Grid>
-        </Grid>
+          </Grid>
       </Box>
+          
 
       {/* Donation Modal */}
       <Modal open={openModal} onClose={handleCloseModal}>
@@ -303,6 +348,50 @@ const ProjectDetail = () => {
         </Box>
       </Modal>
 
+      {/* Other Donation Modal */}
+      <Modal open={openOtherModal} onClose={handleCloseOtherModal}>
+        <Box
+          sx={{
+            padding: 4,
+            width: "300px",
+            margin: "auto",
+            backgroundColor: "white",
+            borderRadius: "8px",
+            boxShadow: 3,
+          }}
+        >
+          <Typography variant="h6" sx={{ marginBottom: 2 }}>
+            Describe Your Donation
+          </Typography>
+          <TextField
+            fullWidth
+            label="Description"
+            variant="outlined"
+            value={donationDescription}
+            onChange={(e) => setDonationDescription(e.target.value)}
+            sx={{ marginBottom: 2 }}
+          />
+          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+            <Button
+              variant="contained"
+              color="secondary"
+              onClick={handleCloseOtherModal}
+              sx={{ width: "45%" }}
+            >
+              Cancel
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={handleOtherDonateSubmit}
+              sx={{ width: "45%" }}
+            >
+              Submit
+            </Button>
+          </Box>
+        </Box>
+      </Modal>
+
       {/* Coin Card */}
       {showCoinCard && (
         <Box
@@ -323,12 +412,42 @@ const ProjectDetail = () => {
           }}
         >
           <img
-            src={coin} // Ensure this path points to your coin image
+            src={coin}
             alt="Coin"
             style={{ width: "150px", height: "150px", marginBottom: "16px" }}
           />
           <Typography variant="h6" sx={{ color: "green" }}>
             Thank you for your generous donation!
+          </Typography>
+        </Box>
+      )}
+
+      {/* Tick Card */}
+      {showTickCard && (
+        <Box
+          sx={{
+            position: "fixed",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "white",
+            borderRadius: "16px",
+            padding: 4,
+            boxShadow: 3,
+            zIndex: 1300,
+          }}
+        >
+          <img
+            src={tick}
+            alt="Tick"
+            style={{ width: "150px", height: "150px", marginBottom: "16px" }}
+          />
+          <Typography variant="h6" sx={{ color: "green" }}>
+            Thank you for your generous donation, we will connect you soon!
           </Typography>
         </Box>
       )}

@@ -30,7 +30,13 @@ const CostEstimation = () => {
   };
 
   const fetchEstimation = async () => {
-    const { projectName, projectScope, duration, targetAudience, additionalNotes } = formData;
+    const {
+      projectName,
+      projectScope,
+      duration,
+      targetAudience,
+      additionalNotes,
+    } = formData;
 
     if (!projectName || !projectScope || !duration || !targetAudience) {
       alert("Please fill out all required fields.");
@@ -41,7 +47,9 @@ const CostEstimation = () => {
       setLoading(true);
 
       // Initialize the Gemini API client
-      const genAI = new GoogleGenerativeAI("");
+      const genAI = new GoogleGenerativeAI(
+        "AIzaSyBeaivuBDufjfqWN5I75qO1HcDDfv-v-Eg"
+      );
       const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
       // Generate the prompt dynamically based on user input
@@ -82,7 +90,10 @@ const CostEstimation = () => {
       <Navbar />
       <div className="p-6 flex justify-center items-center bg-gray-50 min-h-screen">
         <div className="w-full max-w-3xl bg-white rounded-lg shadow-lg p-8">
-          <Typography variant="h5" className="text-center text-2xl font-semibold text-gray-800 mb-6">
+          <Typography
+            variant="h5"
+            className="text-center text-2xl font-semibold text-gray-800 mb-6"
+          >
             Cost Estimation AI Bot
           </Typography>
 
@@ -166,7 +177,10 @@ const CostEstimation = () => {
           {response && (
             <div className="mt-8">
               <Card className="bg-green-50 p-6 rounded-lg shadow-md">
-                <Typography variant="h6" className="text-center text-green-600 mb-4">
+                <Typography
+                  variant="h6"
+                  className="text-center text-green-600 mb-4"
+                >
                   Cost Estimation:
                 </Typography>
                 <Typography
