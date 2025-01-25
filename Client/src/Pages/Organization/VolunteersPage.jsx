@@ -24,7 +24,7 @@ const VolunteersPage = () => {
 
           {/* Stats Section */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
-            <div className="bg-white shadow-lg rounded-lg p-6">
+            <div className="bg-white shadow-md hover:shadow-xl transition-shadow duration-300 rounded-lg p-6">
               <h2 className="text-xl font-semibold text-gray-700">
                 Total Volunteers
               </h2>
@@ -32,7 +32,7 @@ const VolunteersPage = () => {
                 {volunteers.length}
               </p>
             </div>
-            <div className="bg-white shadow-lg rounded-lg p-6">
+            <div className="bg-white shadow-md hover:shadow-xl transition-shadow duration-300 rounded-lg p-6">
               <h2 className="text-xl font-semibold text-gray-700">
                 Total Hours Worked
               </h2>
@@ -40,7 +40,7 @@ const VolunteersPage = () => {
                 {volunteers.reduce((total, vol) => total + vol.hoursWorked, 0)}
               </p>
             </div>
-            <div className="bg-white shadow-lg rounded-lg p-6">
+            <div className="bg-white shadow-md hover:shadow-xl transition-shadow duration-300 rounded-lg p-6">
               <h2 className="text-xl font-semibold text-gray-700">
                 Projects Supported
               </h2>

@@ -113,7 +113,7 @@ const ContentGenerator = () => {
           value={basicInfo}
           onChange={(e) => setBasicInfo(e.target.value)}
           placeholder="Enter basic info about your post..."
-          className="w-full p-4 mb-6 border border-gray-300 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="w-full p-4 mb-6 border border-gray-300 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-green-500"
           rows={4}
         />
 
@@ -121,8 +121,8 @@ const ContentGenerator = () => {
           onClick={generateContent}
           disabled={isLoading}
           className={`w-full py-3 text-white font-semibold rounded-lg ${
-            isLoading ? "bg-gray-400" : "bg-indigo-600"
-          } ${isLoading ? "cursor-not-allowed" : "hover:bg-indigo-700"}`}
+            isLoading ? "bg-gray-400" : "bg-green-500"
+          } ${isLoading ? "cursor-not-allowed" : "hover:bg-green-600"}`}
         >
           {isLoading ? "Generating..." : "Generate Content"}
         </button>
@@ -141,7 +141,7 @@ const ContentGenerator = () => {
                 onClick={() =>
                   copyToClipboard(generatedContent.instagramCaption)
                 }
-                className="mt-4 w-full py-2 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700"
+                className="mt-4 w-full py-2 bg-green-400 text-white font-semibold rounded-lg hover:bg-green-500"
               >
                 Copy Instagram Caption
               </button>

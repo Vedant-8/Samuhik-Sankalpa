@@ -37,7 +37,7 @@ const Navbar = () => {
             </a>
 
             {/* Tools Dropdown */}
-            <div className="relative">
+            <div className="relative z-50">
               <button
                 className="flex items-center text-gray-700 hover:text-green-600 font-medium"
                 onClick={() => setDropdownOpen(!dropdownOpen)} // Toggle dropdown on click

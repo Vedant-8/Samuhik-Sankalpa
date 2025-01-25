@@ -42,8 +42,8 @@ const ContactUs = () => {
   return (
     <>
     <Navbar />
-    <div className="min-h-[90vh] flex flex-col items-center justify-center bg-gradient-to-br from-green-100 to-green-300">
-      <h1 className="text-4xl font-bold text-gray-800 mb-4 text-center">
+    <div className="min-h-[90vh] flex flex-col items-center justify-center bg-gradient-to-br from-green-100 to-green-300 py-6">
+      <h1 className="text-4xl font-bold text-gray-800 mb-4 text-center mt-6">
         Get in Touch
       </h1>
       <p className="text-lg text-gray-700 mb-10 text-center">
