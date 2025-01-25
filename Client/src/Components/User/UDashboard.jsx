@@ -20,21 +20,24 @@ const UDashboard = () => {
     {
       title: "Online Workshop on Sustainable Living",
       date: "January 30, 2025",
-      description: "Join us for a free online workshop on sustainability.",
+      short: "Join us for a free online workshop on sustainability.",
+      description: "Get ready to dive deep into the world of sustainability! 🌱 Join us for an interactive and fun-filled Online Workshop on Sustainable Living, where we’ll explore eco-friendly practices that can transform your daily life. 🌿 From reducing waste to harnessing renewable energy, you’ll leave with practical tips and tricks to make a big impact on our planet. 🌎✨\n\nWhat to Expect:\n- How to reduce your carbon footprint\n- Simple, effective ways to go green at home\n- DIY projects for sustainability\n- A chance to meet like-minded eco-warriors!\n\nDon’t miss out on this chance to become a sustainability champion! Let’s build a greener future together. 🌳",
       image: "https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=pexels-pixabay-531880.jpg&fm=jpg",
       link: "/register",
     },
     {
       title: "Annual Community Meetup",
       date: "February 15, 2025",
-      description: "Meet the like minded people and have a good time.",
+      short: "Meet the like minded people and have a good time.",
+      description: "It’s time to connect, share, and grow! 🌱 Join us for the Annual Community Meetup, where you’ll meet incredible people who share your passion for making a difference. 💬 Whether you're a seasoned change-maker or just getting started, this is the perfect opportunity to network, exchange ideas, and spark new collaborations. 🤝\n\nWhat’s in Store:\n- Engaging conversations with fellow changemakers\n- Inspiring stories from community leaders\n- Opportunities to get involved in impactful projects\n- Fun activities to build connections and friendships\n\nThis is your chance to be part of a vibrant community working toward a brighter future. Let’s make magic happen! ✨",
       image: "https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=pexels-pixabay-531880.jpg&fm=jpg",
       link: "/register",
     },
     {
       title: "Water Conservation Webinar",
       date: "March 5, 2025",
-      description: "Learn techniques to conserve water at home.",
+      short: "Learn techniques to conserve water at home.",
+      description: "It’s time to connect, share, and grow! 🌱 Join us for the Annual Community Meetup, where you’ll meet incredible people who share your passion for making a difference. 💬 Whether you're a seasoned change-maker or just getting started, this is the perfect opportunity to network, exchange ideas, and spark new collaborations. 🤝\n\nWhat’s in Store:\n- Engaging conversations with fellow changemakers\n- Inspiring stories from community leaders\n- Opportunities to get involved in impactful projects\n- Fun activities to build connections and friendships\n\nThis is your chance to be part of a vibrant community working toward a brighter future. Let’s make magic happen! ✨",
       image: "https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=pexels-pixabay-531880.jpg&fm=jpg",
       link: "/register",
     },
@@ -165,7 +168,7 @@ const UDashboard = () => {
                   </h2>
                   <p className="text-sm md:text-base mb-2">{event.date}</p>
                   <p className="text-sm md:text-base mb-4">
-                    {event.description}
+                    {event.short}
                   </p>
                   <button
                     onClick={() => handleRegisterClick(event)}
