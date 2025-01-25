@@ -61,11 +61,16 @@ app.post("/send-email", async (req, res) => {
   try {
     // Configure Nodemailer
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      // service: "gmail",
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false,
       auth: {
         user: "samuhiksankalpa@gmail.com", // Replace with your email
-        pass: "123@abc789", // Replace with your email password or app-specific password
+        pass: "ynck rpqa xxsp ojnd", // Replace with your email password or app-specific password
       },
+      // debug: true, // Show debug logs
+      // logger: true,
     });
 
     // Debugging: Log the transporter configuration
@@ -74,9 +79,10 @@ app.post("/send-email", async (req, res) => {
     // Email content
     const mailOptions = {
       from: "samuhiksankalpa@gmail.com",
-      to: "vedant8wink@gmail.com",
+      to: "mihit.singasane23@spit.ac.in",
       subject: `RSVP Confirmation: ${eventDetails.title}`,
-      text: `You have successfully RSVP'd for the event "${eventDetails.title}".\n\nDetails:\n- Date: ${eventDetails.date}\n- Description: ${eventDetails.description}\n\nThank you!`,
+      // text: `You have successfully RSVP'd for the event "${eventDetails.title}".\n\nDetails:\n- Date: ${eventDetails.date}\n- Description: ${eventDetails.description}\n\nThank you!`,
+      text: `Hi there! 👋, \n🎉 You’ve successfully RSVP’d for the event "${eventDetails.title}".\nWe’re thrilled to have you join us on this journey toward sustainability! 🌱\n\nHere are the event details:\n📅 Date: ${eventDetails.date}\n📝 Description: ${eventDetails.description}\n\nWe can't wait to see you there! 💚\nThank you for being a part of our mission to create a better tomorrow. 🌍 Together, we can make a difference!\n\nWith gratitude,\n✨ The Samuhik Sankalpa Team`,
     };
 
     // Debugging: Log email content
