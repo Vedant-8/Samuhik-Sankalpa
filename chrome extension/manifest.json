@@ -19,7 +19,7 @@
     "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "128": "logo.png"
+      "128": "logo1.png"
     }},
     "content_scripts": [
         {

@@ -33,6 +33,7 @@ import UploadPage from "./Components/User/HandlePhone";
 import ContentGenerator from "./Pages/Organization/ContentGenerator";
 
 import Home from "./Pages/Home";
+import GreenShop from "./Components/User/GreenShop";
 
 // Create a context for authentication
 export const AuthContext = createContext();
@@ -61,6 +62,7 @@ function App() {
           <Route path="/user/bills" element={<Bills />} />
           <Route path="/user/recycle" element={<Recycle />} />
           <Route path="/user/upload" element={<UploadPage />} />
+          <Route path="/user/greenShop" element={<GreenShop />} />
 
           {/* Organization Routes */}
           <Route path="/organisation" element={<Dashboard />} />
