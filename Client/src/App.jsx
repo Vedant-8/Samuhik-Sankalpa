@@ -5,6 +5,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
 import UDashboard from "./Components/User/UDashboard";
 import ProjectDetail from "./Components/User/ProjectDetail";
 import Dashboard from "./Pages/Organization/Dashboard";
@@ -44,6 +45,7 @@ function App() {
   return (
     <AuthContext.Provider value={{ userRole, setUserRole }}>
       <Router>
+        <ScrollToTop />
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<Home />} />
