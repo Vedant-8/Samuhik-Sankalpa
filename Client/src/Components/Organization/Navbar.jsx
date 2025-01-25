@@ -7,9 +7,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Clear any authentication data (e.g., token or user info from localStorage)
-    localStorage.removeItem("authToken"); // or any other key used for authentication
-    // Redirect to home page
+    localStorage.removeItem("authToken");
     navigate("/");
   };
 
@@ -31,7 +29,11 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             <a
               href="/organisation/projects"
-              className="text-gray-700 hover:text-green-600 font-medium"
+              className={`font-medium px-4 py-2 rounded-md hover:text-green-600 ${
+                window.location.pathname === "/organisation/projects"
+                  ? "bg-green-100 text-green-600"
+                  : "text-gray-700"
+              }`}
             >
               Projects
             </a>
@@ -39,8 +41,14 @@ const Navbar = () => {
             {/* Tools Dropdown */}
             <div className="relative z-50">
               <button
-                className="flex items-center text-gray-700 hover:text-green-600 font-medium"
-                onClick={() => setDropdownOpen(!dropdownOpen)} // Toggle dropdown on click
+                className={`flex items-center font-medium px-4 py-2 rounded-md hover:text-green-600 ${
+                  ["/organisation/costEstimation", "/organisation/contentgenerator", "/organisation/socialmedia"].includes(
+                    window.location.pathname
+                  )
+                    ? "bg-green-100 text-green-600"
+                    : "text-gray-700"
+                }`}
+                onClick={() => setDropdownOpen(!dropdownOpen)}
               >
                 Tools
                 <svg
@@ -64,19 +72,31 @@ const Navbar = () => {
                 <div className="absolute mt-2 w-48 bg-white border border-gray-200 shadow-lg rounded-md">
                   <a
                     href="/organisation/costEstimation"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    className={`block px-4 py-2 font-medium rounded-md hover:bg-green-100 hover:text-green-600 ${
+                      window.location.pathname === "/organisation/costEstimation"
+                        ? "bg-green-100 text-green-600"
+                        : "text-gray-700"
+                    }`}
                   >
                     Cost Estimation
                   </a>
                   <a
                     href="/organisation/contentgenerator"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    className={`block px-4 py-2 font-medium rounded-md hover:bg-green-100 hover:text-green-600 ${
+                      window.location.pathname === "/organisation/contentgenerator"
+                        ? "bg-green-100 text-green-600"
+                        : "text-gray-700"
+                    }`}
                   >
                     AI Content Generator
                   </a>
                   <a
-                    href="http://localhost:5174/"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    href="/organisation/socialmedia"
+                    className={`block px-4 py-2 font-medium rounded-md hover:bg-green-100 hover:text-green-600 ${
+                      window.location.pathname === "/organisation/socialmedia"
+                        ? "bg-green-100 text-green-600"
+                        : "text-gray-700"
+                    }`}
                   >
                     MultiPost
                   </a>
@@ -86,19 +106,31 @@ const Navbar = () => {
 
             <a
               href="/organisation/volunteers"
-              className="text-gray-700 hover:text-green-600 font-medium"
+              className={`font-medium px-4 py-2 rounded-md hover:text-green-600 ${
+                window.location.pathname === "/organisation/volunteers"
+                  ? "bg-green-100 text-green-600"
+                  : "text-gray-700"
+              }`}
             >
               Volunteers
             </a>
             <a
               href="/organisation/leaderboard"
-              className="text-gray-700 hover:text-green-600 font-medium"
+              className={`font-medium px-4 py-2 rounded-md hover:text-green-600 ${
+                window.location.pathname === "/organisation/leaderboard"
+                  ? "bg-green-100 text-green-600"
+                  : "text-gray-700"
+              }`}
             >
               Leaderboard
             </a>
             <a
               href="/organisation/contact"
-              className="text-gray-700 hover:text-green-600 font-medium"
+              className={`font-medium px-4 py-2 rounded-md hover:text-green-600 ${
+                window.location.pathname === "/organisation/contact"
+                  ? "bg-green-100 text-green-600"
+                  : "text-gray-700"
+              }`}
             >
               Contact Us
             </a>
@@ -151,71 +183,41 @@ const Navbar = () => {
           <div className="space-y-1 px-2 pb-3">
             <a
               href="/organisation/projects"
-              className="block text-gray-700 hover:text-green-600 font-medium"
+              className={`block font-medium px-4 py-2 rounded-md hover:text-green-600 ${
+                window.location.pathname === "/organisation/projects"
+                  ? "bg-green-100 text-green-600"
+                  : "text-gray-700"
+              }`}
             >
               Projects
             </a>
-            <div className="relative">
-              <button
-                className="block text-gray-700 hover:text-green-600 font-medium"
-                onClick={() => setDropdownOpen(!dropdownOpen)} // Toggle dropdown on click
-              >
-                Tools
-                <svg
-                  className={`ml-2 h-5 w-5 transform transition-transform duration-200 ${
-                    dropdownOpen ? "rotate-180" : "rotate-0"
-                  }`}
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-              {dropdownOpen && (
-                <div className="absolute mt-2 w-48 bg-white border border-gray-200 shadow-lg rounded-md z-100">
-                  <a
-                    href="/organisation/costEstimation"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    Cost Estimation
-                  </a>
-                  <a
-                    href="/organisation/contentgenerator"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    AI Content Generator
-                  </a>
-                  <a
-                    href="/organisation/socialmedia"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    MultiPost
-                  </a>
-                </div>
-              )}
-            </div>
             <a
               href="/organisation/volunteers"
-              className="block text-gray-700 hover:text-green-600 font-medium"
+              className={`block font-medium px-4 py-2 rounded-md hover:text-green-600 ${
+                window.location.pathname === "/organisation/volunteers"
+                  ? "bg-green-100 text-green-600"
+                  : "text-gray-700"
+              }`}
             >
               Volunteers
             </a>
             <a
               href="/organisation/leaderboard"
-              className="block text-gray-700 hover:text-green-600 font-medium"
+              className={`block font-medium px-4 py-2 rounded-md hover:text-green-600 ${
+                window.location.pathname === "/organisation/leaderboard"
+                  ? "bg-green-100 text-green-600"
+                  : "text-gray-700"
+              }`}
             >
               Leaderboard
             </a>
             <a
               href="/organisation/contact"
-              className="block text-gray-700 hover:text-green-600 font-medium"
+              className={`block font-medium px-4 py-2 rounded-md hover:text-green-600 ${
+                window.location.pathname === "/organisation/contact"
+                  ? "bg-green-100 text-green-600"
+                  : "text-gray-700"
+              }`}
             >
               Contact
             </a>
