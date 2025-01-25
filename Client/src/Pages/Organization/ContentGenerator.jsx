@@ -3,7 +3,8 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import Navbar from "../../Components/Organization/Navbar";
 import Footer from "../../Components/Footer";
 
-const genAI = new GoogleGenerativeAI(""); // Add gemini api key here
+// Initialize the GoogleGenerativeAI with the API key from environment variables
+const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY);
 
 const ContentGenerator = () => {
   const [basicInfo, setBasicInfo] = useState("");
@@ -47,7 +48,7 @@ const ContentGenerator = () => {
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
-          Authorization: `Bearer `, // Add stability api here after Bearer
+          Authorization: `Bearer ${import.meta.env.VITE_STABILITY_API_KEY}`,
         },
         body: JSON.stringify({
           text_prompts: [{ text: prompt }],
@@ -129,7 +130,6 @@ const ContentGenerator = () => {
 
         {generatedContent && (
           <div className="w-full mt-8">
-            {/* Instagram Caption */}
             <div className="bg-gray-50 p-6 rounded-lg mb-6 shadow-md">
               <h2 className="text-xl font-semibold text-gray-700 mb-3">
                 Instagram Caption
@@ -147,7 +147,6 @@ const ContentGenerator = () => {
               </button>
             </div>
 
-            {/* Twitter Caption */}
             <div className="bg-gray-50 p-6 rounded-lg mb-6 shadow-md">
               <h2 className="text-xl font-semibold text-gray-700 mb-3">
                 Twitter Caption
@@ -161,7 +160,6 @@ const ContentGenerator = () => {
               </button>
             </div>
 
-            {/* Generated Image */}
             <div className="bg-gray-50 p-6 rounded-lg shadow-md">
               <h2 className="text-xl font-semibold text-gray-700 mb-3">
                 Generated Image
