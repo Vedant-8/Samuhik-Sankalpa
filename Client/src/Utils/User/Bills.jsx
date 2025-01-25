@@ -3,6 +3,8 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import { useGeolocated } from "react-geolocated";
 import Navbar from "../../Components/User/Navbar";
 import Footer from "../../Components/Footer";
+import { marked } from "marked"; // Markdown parser
+import DOMPurify from "dompurify"; // To sanitize HTML
 
 const Bills = () => {
   const [familyMembers, setFamilyMembers] = useState("");
@@ -20,6 +22,20 @@ const Bills = () => {
     "Heater",
     "Microwave",
   ];
+
+  const MarkdownRenderer = ({ markdownText }) => {
+    // Normalize Markdown: Trim and parse
+    const normalizedMarkdown = markdownText.trim(); // Remove extra whitespace
+    const parsedMarkdown = marked(normalizedMarkdown); // Convert markdown to HTML
+    const sanitizedHTML = DOMPurify.sanitize(parsedMarkdown); // Sanitize the HTML output
+  
+    return (
+      <div
+        className="markdown-content"
+        dangerouslySetInnerHTML={{ __html: sanitizedHTML }} // Render sanitized HTML
+      />
+    );
+  };  
 
   const { coords, isGeolocationAvailable, isGeolocationEnabled } =
     useGeolocated({
@@ -103,7 +119,7 @@ const Bills = () => {
             placeholder="Number of family members"
             value={familyMembers}
             onChange={(e) => setFamilyMembers(e.target.value)}
-            className="w-full p-4 rounded-xl border border-gray-300 placeholder-green-600 focus:ring-2 focus:ring-green-600 mb-4"
+            className="w-full p-4 rounded-xl border border-gray-300 placeholder-green-600 mb-4"
           />
 
           <input
@@ -111,7 +127,7 @@ const Bills = () => {
             placeholder="House area in square feet"
             value={squareFeet}
             onChange={(e) => setSquareFeet(e.target.value)}
-            className="w-full p-4 rounded-xl border border-gray-300 placeholder-green-600 focus:ring-2 focus:ring-green-600 mb-4"
+            className="w-full p-4 rounded-xl border border-gray-300 placeholder-green-600 mb-4"
           />
 
           <div className="mb-6">
@@ -152,7 +168,7 @@ const Bills = () => {
             placeholder="Current power consumption (kWh)"
             value={powerConsumption}
             onChange={(e) => setPowerConsumption(e.target.value)}
-            className="w-full p-4 rounded-xl border border-gray-300 placeholder-green-600 focus:ring-2 focus:ring-green-600 mb-6"
+            className="w-full p-4 rounded-xl border border-gray-300 placeholder-green-600 mb-6"
           />
 
           <button
@@ -164,13 +180,14 @@ const Bills = () => {
           </button>
 
           {aiResponse && (
-            <div className="mt-8 p-6 bg-green-50 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-green-700 mb-4">
-                AI Response:
-              </h3>
-              <p className="text-green-900">{aiResponse}</p>
-            </div>
-          )}
+          <div className="mt-8 p-6 bg-green-50 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold text-green-700 mb-4">
+              AI Response:
+            </h3>
+            {/* Render the markdown text using the MarkdownRenderer */}
+            <MarkdownRenderer markdownText={aiResponse} />
+          </div>
+        )}
         </div>
       </div>
       <Footer />
