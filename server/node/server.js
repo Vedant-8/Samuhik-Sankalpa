@@ -40,7 +40,7 @@ app.post("/upload", upload.single("file"), (req, res) => {
   io.emit("fileUploaded", {
     message: "A new file has been uploaded!",
     fileName: req.file.filename,
-    filePath: `http://192.168.14.63:5000/uploads/${req.file.filename}`, //CHANGE
+    filePath: `http://192.168.14.170:5000/uploads/${req.file.filename}`, //CHANGE
   });
 
   res

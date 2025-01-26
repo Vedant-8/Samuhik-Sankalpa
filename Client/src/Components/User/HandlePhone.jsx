@@ -11,7 +11,7 @@ const HandlePhone = () => {
   const [classificationResult, setClassificationResult] = useState(null);
   const [qrCodeUrl, setQrCodeUrl] = useState("");
   //   const [uploadedFile, setUploadedFile] = useState(null);
-  const baseUrl = "http://192.168.14.63:5173/user/recycle"; // Link to the upload page
+  const baseUrl = "http://192.168.14.170:5173/user/recycle"; // Link to the upload page
 
   const generateQrCode = async () => {
     try {
@@ -89,7 +89,7 @@ const HandlePhone = () => {
 
       try {
         const response = await axios.post(
-          "http://192.168.14.63:5000/upload",
+          "http://192.168.14.170:5000/upload",
           formData,
           {
             headers: {
@@ -131,8 +131,8 @@ const HandlePhone = () => {
               file:mr-4 file:py-2 file:px-4
               file:rounded-full file:border-0
               file:text-sm file:font-semibold
-              file:bg-violet-50 file:text-violet-700
-              hover:file:bg-violet-100"
+              file:bg-green-100 file:text-green-600
+              hover:file:bg-green-300"
             />
             {/* <button
           onClick={generateQrCode}
@@ -164,9 +164,9 @@ const HandlePhone = () => {
           <button
             type="submit"
             disabled={!selectedImage}
-            className="w-full py-2 px-4 bg-violet-600 text-white rounded-md 
-            hover:bg-violet-700 focus:outline-none focus:ring-2 
-            focus:ring-violet-500 focus:ring-offset-2
+            className="w-full py-2 px-4 bg-green-600 text-white rounded-md 
+            hover:bg-green-700 focus:outline-none focus:ring-2 
+            focus:ring-green-600 focus:ring-offset-2
             disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Upload Image

@@ -18,8 +18,8 @@ const ImageUploader = () => {
   const [loading, setLoading] = useState(false);
   const [imageUploaded,setImageUploaded] = useState(false);
 
-  const baseUrl = "http://192.168.14.63:5173/user/upload";
-  const socket = io("http://192.168.14.63:5000"); // Connect to backend WebSocket
+  const baseUrl = "http://192.168.14.170:5173/user/upload";
+  const socket = io("http://192.168.14.170:5000"); // Connect to backend WebSocket
   const navigate = useNavigate();
 
   const generateQrCode = async () => {
