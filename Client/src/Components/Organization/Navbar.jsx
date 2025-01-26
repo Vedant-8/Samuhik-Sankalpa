@@ -90,7 +90,7 @@ const Navbar = () => {
                   >
                     AI Content Generator
                   </a>
-                  <a
+                  {/* <a
                     href="/organisation/socialmedia"
                     className={`block px-4 py-2 font-medium rounded-md hover:bg-green-100 hover:text-green-600 ${
                       window.location.pathname === "/organisation/socialmedia"
@@ -99,7 +99,7 @@ const Navbar = () => {
                     }`}
                   >
                     MultiPost
-                  </a>
+                  </a> */}
                 </div>
               )}
             </div>
