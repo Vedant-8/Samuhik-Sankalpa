@@ -16,6 +16,7 @@ const ImageUploader = () => {
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [aiResponse, setAiResponse] = useState("");
   const [loading, setLoading] = useState(false);
+  const [imageUploaded,setImageUploaded] = useState(false);
 
   const baseUrl = "http://192.168.14.63:5173/user/upload";
   const socket = io("http://192.168.14.63:5000"); // Connect to backend WebSocket
@@ -167,7 +168,7 @@ const ImageUploader = () => {
   };
 
   const handleCardClick = (id) => {
-    console.log("bhosda");
+    
     navigate(`/user/project/${id}`); // Navigate to the project detail page with the project ID
   };
 
@@ -244,6 +245,7 @@ const ImageUploader = () => {
           )}
 
           <button
+            onClick={() => setImageUploaded(true)}
             type="submit"
             disabled={!selectedImage}
             className="w-full py-2 px-4 bg-green-500 text-white rounded-md 
@@ -256,7 +258,7 @@ const ImageUploader = () => {
         </form>
       </div>
 
-      {classificationResult && (
+      {filteredProjects ? (
         // <div>
         //   <h3 className="text-xl font-semibold mt-6">Suggested Projects</h3>
         //   {filteredProjects.length === 0 ? (
@@ -278,10 +280,19 @@ const ImageUploader = () => {
           <div className="flex justify-center px-4 pb-8 mt-5">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl w-full">
               {/* Show message if no projects are found */}
-              {filteredProjects.length === 0 ? (
-                <div className="col-span-full text-center text-xl text-gray-600">
-                  No such projects exist
-                </div>
+              {filteredProjects.length === 0 && imageUploaded? (
+                <div className="flex w-full justify-center items-center mt-10">
+                <motion.div
+                  className="h-16 w-16 rounded-full border-t-4 border-green-600 border-opacity-75 animate-spin"
+                  style={{
+                    borderLeft: "4px solid transparent",
+                    borderRight: "4px solid transparent",
+                  }}
+                ></motion.div>
+                <p className="ml-4 text-lg font-medium text-green-700 animate-pulse">
+                  Fetching projects data
+                </p>
+              </div>
               ) : (
                 filteredProjects.map((project) => (
                   <div key={project.id} className="cursor-pointer">
@@ -309,7 +320,18 @@ const ImageUploader = () => {
             </div>
           </div>
         </>
-      )}
+      ) : ( imageUploaded && (<div className="flex justify-center items-center mt-10">
+                    <motion.div
+                      className="h-16 w-16 rounded-full border-t-4 border-green-600 border-opacity-75 animate-spin"
+                      style={{
+                        borderLeft: "4px solid transparent",
+                        borderRight: "4px solid transparent",
+                      }}
+                    ></motion.div>
+                    <p className="ml-4 text-lg font-medium text-green-700 animate-pulse">
+                      Fetching projects data
+                    </p>
+                  </div>))}
     </>
   );
 };
