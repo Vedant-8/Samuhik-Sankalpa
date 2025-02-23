@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 // NewsAPI Setup
 const NEWS_API_URL = "https://newsapi.org/v2/everything";
-const API_KEY = "fec0817602714ce08bcf62b3230b16b5"; // Replace with your NewsAPI key
+const API_KEY = ""; // Replace with your NewsAPI key
 
 const Blog = () => {
   const [selectedBlog, setSelectedBlog] = useState(null);
